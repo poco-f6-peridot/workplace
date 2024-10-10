@@ -29,5 +29,13 @@ else
 fi
 cd ../../..
 
-echo "Setup tools completed successfully!"
+# Step 2: Clone JDK
+echo "Cloning JDK 21..."
+if [ -d "lineage/prebuilts/jdk/jdk21" ]; then
+    echo "JDK 21 already exists, skipping clone..."
+else
+    mkdir -p lineage/prebuilts/jdk  # Create the lineage/prebuilts/jdk directory if it doesn't exist
+    git clone --depth 1 --branch android-14.0.0_r67 https://android.googlesource.com/platform/prebuilts/jdk/jdk21 lineage/prebuilts/jdk/jdk21
+fi
 
+echo "Setup tools completed successfully!"
