@@ -19,8 +19,8 @@ fi
 
 # Step 2: Download MIUI Firmware
 
-FIRMWARE_URL="https://bn.d.miui.com/OS1.0.8.0.UMRMIXM/miui_MARBLEGlobal_OS1.0.8.0.UMRMIXM_34e945ae40_14.0.zip"
-FIRMWARE_FILE="miui_MARBLEGlobal_OS1.0.8.0.UMRMIXM_34e945ae40_14.0.zip"
+FIRMWARE_URL="https://cdnorg.d.miui.com/OS1.0.6.0.UNPINXM/miui_PERIDOTINGlobal_OS1.0.6.0.UNPINXM_f20e0a401e_14.0.zip"
+FIRMWARE_FILE="miui_PERIDOTINGlobal_OS1.0.6.0.UNPINXM_f20e0a401e_14.0.zip"
 
 echo "Downloading MIUI firmware..."
 if [ -f "$FIRMWARE_FILE" ]; then

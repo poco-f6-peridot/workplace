@@ -7,28 +7,18 @@ fi
 
 # Step 3: Extract Blobs
 
-echo "Checking and cloning or updating Xiaomi Marble device tree..."
-if [ -d "lineage/device/xiaomi/marble" ]; then
-    echo "Xiaomi Marble device tree already exists, updating..."
-    cd lineage/device/xiaomi/marble
+echo "Checking and cloning or updating Xiaomi peridot device tree..."
+if [ -d "lineage/device/xiaomi/peridot" ]; then
+    echo "Xiaomi Peridot device tree already exists, updating..."
+    cd lineage/device/xiaomi/peridot
     git pull
     cd ../../../..
 else
-    git clone https://github.com/cupid-development/android_device_xiaomi_marble.git -b lineage-21 lineage/device/xiaomi/marble
+    git clone https://github.com/peridot-dev/android_device_xiaomi_peridot.git -b fourteen lineage/device/xiaomi/peridot
 fi
 
-echo "Checking and cloning or updating Xiaomi SM8450-common device tree..."
-if [ -d "lineage/device/xiaomi/sm8450-common" ]; then
-    echo "Xiaomi SM8450-common device tree already exists, updating..."
-    cd lineage/device/xiaomi/sm8450-common
-    git pull
-    cd ../../../..
-else
-    git clone https://github.com/cupid-development/android_device_xiaomi_sm8450-common.git -b lineage-21 lineage/device/xiaomi/sm8450-common
-fi
-
-echo "Running setup-makefiles.sh in the marble directory..."
-cd lineage/device/xiaomi/marble
+echo "Running setup-makefiles.sh in the peridot directory..."
+cd lineage/device/xiaomi/peridot
 bash setup-makefiles.sh
 
 echo "Running extract-files.sh using output from lineage/DumprX..."
