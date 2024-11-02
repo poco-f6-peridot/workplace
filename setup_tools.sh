@@ -13,7 +13,7 @@ if [ -d "lineage/prebuilts/extract-tools" ]; then
     cd lineage/prebuilts/extract-tools
     git pull
 else
-    git clone https://github.com/LineageOS/android_prebuilts_extract-tools.git -b lineage-21.0 lineage/prebuilts/extract-tools
+    git clone https://github.com/LineageOS/android_prebuilts_extract-tools.git -b lineage-22.0 lineage/prebuilts/extract-tools
     cd lineage/prebuilts/extract-tools
 fi
 cd ../../..
@@ -24,7 +24,7 @@ if [ -d "lineage/tools/extract-utils" ]; then
     cd lineage/tools/extract-utils
     git pull
 else
-    git clone https://github.com/LineageOS/android_tools_extract-utils.git -b lineage-21.0 lineage/tools/extract-utils
+    git clone https://github.com/LineageOS/android_tools_extract-utils.git -b lineage-22.0 lineage/tools/extract-utils
     cd lineage/tools/extract-utils
 fi
 cd ../../..
